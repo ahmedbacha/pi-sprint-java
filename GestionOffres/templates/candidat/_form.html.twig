@@ -1,0 +1,64 @@
+<div class="card-body card-block">
+        {{ form_start(form,{'attr':{'novalidate':'novalidate'}},{'attr':{'class':'form-horizontal'}}) }}
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    {{ form_label(form.FirstName,"First Name :") }}
+                </div>
+                <div class="col-12 col-md-9">
+                    {{ form_widget(form.FirstName,{'attr':{'class':'form-control'}})}}
+                    {% if form_errors(form.FirstName) is not empty %}
+                        <small class="form-text text-muted">{{ form_errors(form.FirstName) }}</small>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    {{ form_label(form.LastName,"Last Name :") }}
+                </div>
+                <div class="col-12 col-md-9">
+                    {{ form_widget(form.LastName,{'attr':{'class':'form-control'}})}}
+                    {% if form_errors(form.LastName) is not empty %}
+                        <small class="form-text text-muted">{{ form_errors(form.LastName) }}</small>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    {{ form_label(form.Email,"Email :") }}
+                </div>
+                <div class="col-12 col-md-9">
+                    {{ form_widget(form.Email,{'attr':{'class':'form-control'}})}}
+                    {% if form_errors(form.Email) is not empty %}
+                        <small class="form-text text-muted">{{ form_errors(form.Email) }}</small>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    {{ form_label(form.Description,"Description :") }}
+                </div>
+                <div class="col-12 col-md-9">
+                    {{ form_widget(form.Description,{'attr':{'class':'form-control'}})}}
+                    {% if form_errors(form.Description) is not empty %}
+                        <small class="form-text text-muted">{{ form_errors(form.Description) }}</small>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    {{ form_label(form.offres,"Offres :") }}
+                </div>
+                <div class="col-12 col-md-9">
+                    {{ form_widget(form.offres,{'attr':{'class':'form-control'}})}}
+                    {% if form_errors(form.offres) is not empty %}
+                        <small class="form-text text-muted">{{ form_errors(form.offres) }}</small>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div align="center" class="card-footer">
+                <button class="btn">{{ button_label|default('Save') }}</button>
+                <button class="btn btn-outline-secondary"><a href="{{ path('app_candidat_index') }}">Back To List</a></button>
+            </div>
+        {{ form_end(form) }}
+    </div>

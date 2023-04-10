@@ -1,0 +1,37 @@
+{% extends "baseFront.html.twig" %}
+
+{% block tache %}
+<br><br><br>
+    <h1>Offre index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Proprietaire</th>
+                <th>Candidats</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for offre in offres %}
+            <tr>
+                <td>{{ offre.titre }}</td>
+                <td>{{ offre.description }}</td>
+                <td>{{ offre.proprietaire }}</td>
+                <td>{{ offre.candidats|join(' | ') }}</td>
+                <td>
+                    <button class="btn"><a href="{{ path('app_offre_show_front', {'id': offre.id}) }}">show</a></button>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <br><br><br>
+
+{% endblock %}

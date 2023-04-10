@@ -1,0 +1,25 @@
+{% extends "baseFront.html.twig" %}
+
+{% block tache %}
+<br><br><br>
+    <h1>Offre</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Titre</th>
+                <td>{{ offre.titre }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ offre.description }}</td>
+            </tr>
+            <tr>
+                <th>Proprietaire</th>
+                <td>{{ offre.proprietaire }}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <br><br><br>
+{% endblock %}

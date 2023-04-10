@@ -1,0 +1,42 @@
+{% extends "baseBack.html.twig" %}
+
+
+{% block body %}
+    <h1>Candidat index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Description</th>
+                <th>Offres</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for candidat in candidats %}
+            <tr>
+                <td>{{ candidat.id }}</td>
+                <td>{{ candidat.FirstName }}</td>
+                <td>{{ candidat.LastName }}</td>
+                <td>{{ candidat.Email }}</td>
+                <td>{{ candidat.Description }}</td>
+                <td>{{ candidat.offres|join(' | ') }}</td>
+                <td>
+                    <button class="btn"><a href="{{ path('app_candidat_show', {'id': candidat.id}) }}">show</a></button>
+                    <button class="btn"><a href="{{ path('app_candidat_edit', {'id': candidat.id}) }}">edit</a></button>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <button class="btn"><a href="{{ path('app_candidat_new') }}">Create new</a></button>
+{% endblock %}

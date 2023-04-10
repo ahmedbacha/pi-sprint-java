@@ -1,0 +1,39 @@
+{% extends "baseBack.html.twig" %}
+
+{% block body %}
+    <h1>Offre index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Proprietaire</th>
+                <th>Candidats</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for offre in offres %}
+            <tr>
+                <td>{{ offre.id }}</td>
+                <td>{{ offre.titre }}</td>
+                <td>{{ offre.description }}</td>
+                <td>{{ offre.proprietaire }}</td>
+                <td>{{ offre.candidats|join(' | ') }}</td>
+                <td>
+                    <button class="btn"><a href="{{ path('app_offre_show', {'id': offre.id}) }}">show</a></button>
+                    <button class="btn"><a href="{{ path('app_offre_edit', {'id': offre.id}) }}">edit</a></button>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <button class="btn"><a href="{{ path('app_offre_new') }}">Create new</a></button>
+{% endblock %}
