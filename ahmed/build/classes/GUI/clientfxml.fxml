@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="912.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="controllers.ClientfxmlController">
+    <stylesheets>
+        <URL value="@clientfxml.css" />
+    </stylesheets>
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ab551" height="606.0" stroke="BLACK" strokeType="INSIDE" width="136.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cbd1d7" height="57.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="912.0" />
+      <Label layoutX="373.0" layoutY="26.0" text="Espace Client">
+         <font>
+            <Font name="AppleGothic Regular" size="40.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_nom" layoutX="246.0" layoutY="169.0" />
+      <TextField fx:id="tf_region" layoutX="246.0" layoutY="242.0" />
+      <TextField fx:id="tf_prenom" layoutX="456.0" layoutY="169.0" />
+      <TextField fx:id="tf_ville" layoutX="456.0" layoutY="242.0" />
+      <TextField fx:id="tf_cin" layoutX="666.0" layoutY="169.0" />
+      <TextField fx:id="tf_adresse" layoutX="666.0" layoutY="242.0" />
+      <Label layoutX="246.0" layoutY="146.0" text="nom" />
+      <Label layoutX="469.0" layoutY="146.0" text="prenom" />
+      <Label layoutX="671.0" layoutY="146.0" prefHeight="17.0" prefWidth="21.0" text="cin" />
+      <Label layoutX="246.0" layoutY="216.0" text="region" />
+      <Label layoutX="457.0" layoutY="216.0" text="ville" />
+      <Label layoutX="671.0" layoutY="216.0" text="adresse" />
+      <Button layoutX="484.0" layoutY="303.0" mnemonicParsing="false" onAction="#modifierClinet" style="-fx-background-color: #6ab551;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="AppleGothic Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="29.0" layoutY="504.0" mnemonicParsing="false" onAction="#changepassword" style="-fx-background-color: #6ab551; -fx-border-color: white;" text="Change Mot de passe" textFill="WHITE">
+         <font>
+            <Font name="AppleGothic Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="97.0" layoutY="559.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #6ab551; -fx-border-color: black;" text="Deconnxion" textFill="RED">
+         <font>
+            <Font name="AppleGothic Regular" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
