@@ -1,0 +1,5 @@
+Name Of Product : stylo
+Price Of Product : 500.0
+Discount Of Product : 2%
+--------------------------------------
+

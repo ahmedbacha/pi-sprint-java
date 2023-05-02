@@ -1,0 +1,5 @@
+Name Of Product : yaought
+Price Of Product : 4.0
+Discount Of Product : 10%
+--------------------------------------
+
